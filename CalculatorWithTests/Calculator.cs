@@ -20,7 +20,7 @@ namespace CalculatorWithTests
         {
             throw new NotImplementedException();
         }
-        public int Divide(int dividend, int divisor)
+        public int Divide(decimal dividend, decimal divisor)
         {
             throw new NotImplementedException();
         }

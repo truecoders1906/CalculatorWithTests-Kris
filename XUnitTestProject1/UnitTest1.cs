@@ -60,8 +60,24 @@ namespace XUnitTestProject1
 
             //Assert
             Assert.Equal(expectedOutcome, actual);
-
-
         }
+        [Theory]
+        [InlineData(10, 5, 2)]
+        [InlineData(10, 0, 0)]
+        [InlineData(2, 5, .4)]
+        [InlineData(567, 123, 4.6097561)]
+        public void Divide(decimal dividend, decimal divisor, decimal expectedDivision)
+        {
+            //Arrange
+            Calculator calculator1 = new Calculator();
+
+            //Act
+            decimal actual = calculator1.Divide(dividend, divisor);
+
+            //Assert
+            Assert.Equal(expectedDivision, actual);         
+        }
+
+        
     }
 }
