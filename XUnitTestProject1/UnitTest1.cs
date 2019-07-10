@@ -77,7 +77,23 @@ namespace XUnitTestProject1
             //Assert
             Assert.Equal(expectedDivision, actual);         
         }
+        [Theory]
+        [InlineData(4, 24)]
+        [InlineData(9, 362880)]
+        [InlineData(12, 479001600)]
+        [InlineData(0, 0)]
+        public void Factorial(long factNumber, long expectedFactorial)
+        {
+            //Arrange
+            Calculator calculator1 = new Calculator();
 
+            //Act
+            long actual = calculator1.Factorial(factNumber);
+
+            //Assert
+            Assert.Equal(expectedFactorial, actual);
+
+        }
         
     }
 }

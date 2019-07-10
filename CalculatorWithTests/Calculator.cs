@@ -24,7 +24,7 @@ namespace CalculatorWithTests
         {
             throw new NotImplementedException();
         }
-        public int Factorial(int factNumber)
+        public int Factorial(long factNumber)
         {
             throw new NotImplementedException();
         }
