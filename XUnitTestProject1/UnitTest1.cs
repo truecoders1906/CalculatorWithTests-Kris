@@ -20,10 +20,10 @@ namespace XUnitTestProject1
         public void Add(int addend1, int addend2, int sum)
         {
             // Arrange
-            UnitTest1 unitTest = new UnitTest1();
+            Calculator calculator1 = new Calculator();
 
             // Act
-            int actual = unitTest.Add(addend1, addend2);
+            int actual = calculator1.Add(addend1, addend2);
 
             // Assert
             Assert.Equal(sum, actual);
