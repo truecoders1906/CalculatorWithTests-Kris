@@ -52,7 +52,14 @@ namespace XUnitTestProject1
         [InlineData(3, -4, -12)]
         public void Multiply(int a, int b, int expectedOutcome)
         {
-            
+            //Arrange
+            Calculator calculator1 = new Calculator();
+
+            //Act
+            int actual = calculator1.Multiply(a, b);
+
+            //Assert
+            Assert.Equal(expectedOutcome, actual);
 
 
         }
