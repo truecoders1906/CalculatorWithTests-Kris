@@ -27,8 +27,32 @@ namespace XUnitTestProject1
 
             // Assert
             Assert.Equal(sum, actual);
+        }
+        [Theory]
+        [InlineData(6, 5, 1)]
+        [InlineData(10, 5, 5)]
+        [InlineData(6, 6, 0)]
+        [InlineData(100, 1, 99)]
+        public void Subtract(int minuend, int subtrahend, int expectedDifference)
+        {
+            //Arrange
+            Calculator calculator1 = new Calculator();
 
+            //Act
+            int actual = calculator1.Subtract(minuend, subtrahend);
 
+            //Assert
+            Assert.Equal(expectedDifference, actual);
+        }
+        [Theory]
+        [InlineData(3, 4, 12)]
+        [InlineData(6, 4, 24)]
+        [InlineData(7, 5, 35)]
+        [InlineData(6, 0, 0)]
+        [InlineData(3, -4, -12)]
+        public void Multiply(int a, int b, int expectedOutcome)
+        {
+            
 
 
         }
